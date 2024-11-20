@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стилизация и отправка формы</title>
+  <link rel="stylesheet" href="css/select.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- https://youtu.be/PqTrhfjLQBI -->
+  <div class="wrapper">
+    <div class="form">
+      <form action="#" id="form" class="form__body">
+        <h2 class="form__title">Отправка данных на почту</h2>
+
+        <div class="form__item">
+          <label for="form-name" class="form__label">Имя*:</label>
+          <input id="form-name" class="form__imput" type="text" name="f-name">
+        </div>
+
+        <div class="form__item">
+          <label for="form-email" class="form__label">E-mail*:</label>
+          <input id="form-email" class="form__imput" type="text" name="f-email">
+        </div>
+
+        <div class="form__item">
+          <p class="form__label">Левша или правша?</p>
+          <div class="options">
+
+            <div class="options__item">
+              <input id="form-right-handed" class="options__imput" type="radio" value="right" name="f-hand" checked>
+              <label for="form-right-handed" class="options__label"><span>Правша</span></label>
+            </div>
+
+            <div class="options__item">
+              <input id="form-left-handed" class="options__imput" type="radio" value="left" name="f-hand">
+              <label for="form-left-handed" class="options__label"><span>Левша</span></label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form__item">
+          <label for="form-message" class="form__label">Сообщение:</label>
+          <textarea id="form-message" class="form__imput form__textarea" name="f-message"></textarea>
+        </div>
+
+        <div class="form__item">
+          <p class="form__label">Возраст:</p>
+          <select class="form__select" name="f-age">
+            <option value="от 18 до 25">Молодой</option>
+            <option value="от 25 до 45">Старый</option>
+            <option value="от 45">Супер стар</option>
+          </select>
+        </div>
+
+        <div class="form__item">
+          <p class="form__label">Прикрепить фото</p>
+          <div class="file">
+            <div class="file__item">
+              <input id="form-image" class="file__imput" type="file" name="f-image" accept=".jpg, .png, .gif">
+              <div class="file__button">Выбрать</div>
+            </div>
+            <div class="file__prview"></div>
+          </div>
+        </div>
+
+        <div class="form__item">
+          <div class="checkbok">
+            <input id="form-agreement" class="checkbox__input" type="checkbox" name="f-agreement" checked>
+            <label for="form-agreement" class="checkbox__label"><span>Я даю своё согласие на обработку персональных данных в соответствии с </span><a href="#">условиями</a></label>
+          </div>
+        </div>
+
+        <button class="form__dutton" type="submit">Отпроавить</button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/select.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
